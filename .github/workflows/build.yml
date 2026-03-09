@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Checkout config repo
+       uses: actions/checkout@v3
+       with:
+          repository: Varsha0302/app-config-demo
+          path: config
 
       - name: List repository files
         run: ls -la
