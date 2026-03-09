@@ -9,9 +9,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Checkout config repo
-       uses: actions/checkout@v3
-       with:
+        uses: actions/checkout@v3
+        with:
           repository: Varsha0302/app-config-demo
           path: config
 
@@ -20,5 +21,6 @@ jobs:
 
       - name: Print message
         run: echo "Pipeline executed successfully"
+
       - name: Use secret
-        run: echo ${{ secrets.MY_SECRET}}
+        run: echo ${{ secrets.MY_SECRET }}
